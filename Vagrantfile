@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Attributeの定義
     chef.json = {
       nginx: {
-        env: ["php"]
+        env: ["php","ruby"]
       }
     }
     
@@ -30,6 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       recipe[nginx]
       recipe[php-env]
       recipe[ruby-env]
+      recipe[nodejs]
     ]
   end
 end
