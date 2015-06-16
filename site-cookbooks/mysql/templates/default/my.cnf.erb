@@ -1,0 +1,11 @@
+[mysqld]
+log-bin
+datadir=/var/lib/mysql/mysql.sock
+user=mysql
+
+#Disebling symbolic-links is recommended to prevent assorted security risks
+sybolic-links=0
+
+[mysqld_safe]
+log-error=/var/lob/mysqld.log
+pid-file=/var/run/mysqld/mysqld.pid

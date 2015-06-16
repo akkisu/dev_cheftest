@@ -18,6 +18,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Attributeの定義
     chef.json = {
+      mysql: {
+        server_root_password: 'rootpass'
+      },
       nginx: {
         env: ["php","ruby"]
       }
@@ -31,6 +34,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       recipe[php-env]
       recipe[ruby-env]
       recipe[nodejs]
+      recipe[mysql]
     ]
   end
 end
