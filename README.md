@@ -25,5 +25,6 @@ bundle install
 ###(3) vagrant up & probision
 
 ```bash:
+bundle exec berks vendor ./cookbooks
 VAGRANT_LOG=info vagrant up --provision >&vagrant.log
 ```
