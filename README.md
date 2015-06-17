@@ -1,4 +1,4 @@
-# lmnpt
+# lmnpr
 
 ##1. What?
 PHP & Ruby & MySQL Application Development Environment image and recipe of chef.
@@ -7,7 +7,6 @@ PHP & Ruby & MySQL Application Development Environment image and recipe of chef.
 * Vagrant + BirtualBox
 * CentOS6.5
 * nginx 
-* unicorn
 * PHP
 * ruby
 * MySQL
@@ -19,14 +18,6 @@ PHP & Ruby & MySQL Application Development Environment image and recipe of chef.
 ```bash:
 #Bundlerのインストール
 sudo gem install bundler
-
-#Gemfile作成
-cat <<'EOF' > Gemfile
-source 'https://rubygems.org'
-gem 'chef'
-gem 'knife-solo'
-gem 'berkshelf'
-EOF
 #bundleコマンドの実行
 bundle install
 ```
